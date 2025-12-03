@@ -1,0 +1,182 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(249, 246, 248);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #295abe;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 5px;
+    color: #295abe;
+    background-color:  rgb(227, 227, 251);
+}
+fieldset {
+    background-color: rgb(233, 243, 245);
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(41, 90, 190, 0.3);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+p{
+    color: #233f77;
+    padding: 5px;
+}
+fieldset:hover {
+    box-shadow: 0 0 30px rgba(41, 90, 190, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #295abe;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    color: #295abe;
+    background-color: rgb(227, 227, 251);
+}
+label{
+    color: #295abe;
+font-weight:600;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 30%;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select {
+    width: 65%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.form-group select option:disabled {
+    color: grey;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: #295abe;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fa2f65;
+}
+
+.receipt-details {
+    margin-bottom: 20px;
+}
+
+.receipt-details p {
+    margin: 5px 0;
+}
+
+.order-details {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.order-details th, .order-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-details th {
+    background-color:  #295abe;
+    color: white;
+}
+
+
+.order-summary p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-form {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.error-fieldset {
+    width: 300px;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+.error-messages {
+    color: red;
+}

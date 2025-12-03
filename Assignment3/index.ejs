@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Petal Perfection</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('layouts/header') %>
+    <main>
+        <fieldset>
+            <h2>Create Account</h2>
+            <form action="/submit" method="post">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required value="<%= data ? data.name : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required value="<%= data ? data.address : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required value="<%= data ? data.city : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="province">Province *</label>
+                    <select id="province" name="province">
+                        <option value="" disabled selected style="color: grey;">Select your province</option>
+                        <option value="AB" <%= data && data.province === 'AB' ? 'selected' : '' %>>Alberta (AB)</option>
+                        <option value="BC" <%= data && data.province === 'BC' ? 'selected' : '' %>>British Columbia (BC)</option>
+                        <option value="MB" <%= data && data.province === 'MB' ? 'selected' : '' %>>Manitoba (MB)</option>
+                        <option value="NB" <%= data && data.province === 'NB' ? 'selected' : '' %>>New Brunswick (NB)</option>
+                        <option value="NL" <%= data && data.province === 'NL' ? 'selected' : '' %>>Newfoundland and Labrador (NL)</option>
+                        <option value="NT" <%= data && data.province === 'NT' ? 'selected' : '' %>>Northwest Territories (NT)</option>
+                        <option value="NS" <%= data && data.province === 'NS' ? 'selected' : '' %>>Nova Scotia (NS)</option>
+                        <option value="NU" <%= data && data.province === 'NU' ? 'selected' : '' %>>Nunavut (NU)</option>
+                        <option value="ON" <%= data && data.province === 'ON' ? 'selected' : '' %>>Ontario (ON)</option>
+                        <option value="PE" <%= data && data.province === 'PE' ? 'selected' : '' %>>Prince Edward Island (PE)</option>
+                        <option value="QC" <%= data && data.province === 'QC' ? 'selected' : '' %>>Quebec (QC)</option>
+                        <option value="SK" <%= data && data.province === 'SK' ? 'selected' : '' %>>Saskatchewan (SK)</option>
+                        <option value="YT" <%= data && data.province === 'YT' ? 'selected' : '' %>>Yukon (YT)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone Number 10 digits" required value="<%= data ? data.phone : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email"  value="<%= data ? data.email : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="orchid">Orchid - $12</label>
+                    <input type="number" id="orchid" name="orchid" min="0" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="rose">Rose - $7</label>
+                    <input type="number" id="rose" name="rose" min="0" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="bouquet">Bouquet - $20</label>
+                    <input type="number" id="bouquet" name="bouquet" min="0" max="100">
+                </div>
+                <button type="checkout">Checkout</button>
+            </form>
+        </fieldset>
+
+        <!--error form-->
+        <fieldset class="error-fieldset">
+            <h2>Errors</h2>
+            <% if (errors && errors.length > 0) { %>
+                <div class="error-messages">
+                    <% errors.forEach(error => { %>
+                        <p class="error"><%= error.msg %></p>
+                    <% }) %>
+                </div>
+            <% } else { %>
+               
+            <% } %>
+        </fieldset>
+    </main>
+    <%- include('layouts/footer') %>
+</body>
+</html>
