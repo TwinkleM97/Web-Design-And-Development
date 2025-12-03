@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Order Kiosk</title>
+  <!--linking CSS and Javascript -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>&#128158; ButterCream Dreams &#128158;</h1>
+    </header>
+
+    <div class="products">
+      <!--Adding list of cupcakes -->
+      <div class="product-list">
+        <img src="./images/Chocolate-Orange.jpg">
+        <p>Choco-orange-$5</p>
+        <button onclick="addToCart('Choco-orange', 5)">Add to Cart</button>
+      </div>
+
+      <div class="product-list">
+        <img src="./images/raspberry.jpg">
+        <p>Lemon Rasberry-$4</p>
+        <button onclick="addToCart('Lemon Rasberry', 4)">Add to Cart</button>
+      </div>
+
+      <div class="product-list">
+        <img src="./images/Chocolate-Strawberry.jpg">
+        <p>Strawberrycream-$5</p>
+        <button onclick="addToCart('Strawberrycream', 5)">Add to Cart</button>
+      </div>
+
+      <div class="product-list">
+        <img src="./images/pumpkin-cupcake.jpg">
+        <p>Creamy Pumpkin-$6</p>
+        <button onclick="addToCart('Creamy Pumpkin', 6)">Add to Cart</button>
+      </div>
+
+      <div class="product-list">
+        <img src="./images/lemon-cupcake.jpg">
+        <p>Lemon Drizzle-$3</p>
+        <button onclick="addToCart('Lemon Drizzle', 3)">Add to Cart</button>
+      </div>
+
+      <!-- Checkout Button -->
+      <button id="checkoutButton" onclick="checkout()">Checkout</button>
+
+      <!-- Receipt -->
+
+      <div id="receipt"><h1>Receipt</h1></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
