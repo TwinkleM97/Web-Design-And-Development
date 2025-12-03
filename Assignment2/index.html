@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Sale</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1 align="center">&#127811;&#127803; Summer Garage Sale &#127803;&#127811;</h1>
+        <h2 align="center">Be a Superhero : Capes Optional, Generosity Required</h2>
+    </header>
+
+    <form name="fundRaiser" action="#">
+        <fieldset>
+        <div>
+            <h2>&#128179; Payment Information &#128179;</h2>
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="First Last" />
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="email@domain.com" />
+
+            <div>
+                <label for="creditCard">Credit Card Number: </label>
+                <input type="text" id="creditCard" placeholder="xxxx-xxxx-xxxx-xxxx" />
+            </div>
+            <div>
+                <label for="creditExpiryMonth">Credit Card Expiry Month: </label>
+                <input type="text" id="creditExpiryMonth" placeholder="MMM" />
+            </div>
+            <div>
+                <label for="creditExpiryYear">Credit Card Expiry Year: </label>
+                <input type="text" id="creditExpiryYear" placeholder="yyyy" />
+            </div>
+
+            <h2 align="center">&#127881; Summer Sale Price &#127881;</h2>
+
+            <div>
+                <label for="basketball">No.of Basketballs ($15):</label>
+                <input type="text" id="basketball" name="Basketball" placeholder="Enter a quantity">
+            </div>
+            <div>
+                <label for="guitar">No.of Guitars ($30):</label>
+                <input type="text" id="guitar" name="Guitar" placeholder="Enter a quantity">
+            </div>
+            <div>
+                <label for="sunglasses">No.of Sunglasses ($8):</label>
+                <input type="text" id="sunglasses" name="Sunglasses" placeholder="Enter a quantity" >
+            </div>
+            <div>
+                <label for="purse">No.of Purses ($5):</label>
+                <input type="text" id="purse" name="Purse" placeholder="Enter a quantity">
+            </div>
+            <div>
+                <label for="blender">No.of Blenders ($25):</label>
+                <input type="text" id="blender" name="Blender" placeholder="Enter a quantity"  >
+            </div>
+            <button type="button" onclick="generateReceipt()">Checkout</button>
+        </fieldset>
+    </form>
+    <div id="errors" align="center"></div>
+    <div id="receipt"></div> 
+    </div>
+
+  
+
+</body>
+
+</html>
