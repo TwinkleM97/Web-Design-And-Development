@@ -1,0 +1,241 @@
+html, body {
+    height: 100%;
+    font-family: monospace;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(249, 246, 248);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    width: 100%;
+}
+h1{
+    color: #295abe;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+    font-size: 30px;
+}
+.orders {
+    color: #295abe;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(3, 100, 130, 0.3);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #295abe;
+}
+
+header .logo {
+    font-size: 25px;
+    font-weight: bold ;
+    font-family: monospace;
+    padding: 5px;
+    color: #ffffff;
+    background-color: rgb(47, 132, 244);
+}
+
+fieldset {
+    background-color: rgb(233, 243, 245);
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(18, 185, 235, 0.3);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+p {
+    color: #1d0ee9;
+    font-weight: bold;
+    padding: 5px;
+}
+
+fieldset:hover {
+    box-shadow: 0 0 30px rgba(41, 90, 190, 0.5);
+}
+nav {
+    background-color: #b1e0f6;
+    padding: 0.2px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display:inline;
+    margin: 10px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0804f6;
+    font-size: large;
+}
+
+.receipt {
+max-width: 1000px;
+margin: 1px auto;
+padding: 20px;
+font-size: 17px;
+font-family: monospace;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(3, 100, 130, 0.3);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  background-color:#bceaf8
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: #4504f8;
+}
+th {
+    background-color:#bceaf8;
+    color: #3e38e4;
+    text-align: left;
+    padding: 10px;
+}
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.total {
+    text-align: left;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color:  #b1e0f6;
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    color: #4510f4;
+}
+
+label {
+    color: #295abe;
+    font-weight: 600;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 30%;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select {
+    width: 65%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.form-group select option:disabled {
+    color: grey;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: #295abe;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f81f1f;
+}
+
+.receipt-details {
+    margin-bottom: 20px;
+}
+
+.receipt-details p {
+    margin: 5px 0;
+}
+
+.order-details {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.order-details th, .order-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-details th {
+    background-color: #295abe;
+    color: white;
+}
+
+.order-summary p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-form {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.error-fieldset {
+    width: 300px;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+
+.error-messages {
+    color: red;
+}

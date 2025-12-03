@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('layouts/header') %>
+    <main>
+        <div>
+        <h1>Order List</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Badminton Racket</th>
+                    <th>Basketball</th>
+                    <th>Cricket Bat</th>
+                    <th>Subtotal</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Amount</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= order.name %></td>
+                        <td><%= order.address %></td>
+                        <td><%= order.city %></td>
+                        <td><%= order.province %></td>
+                        <td><%= order.phone %></td>
+                        <td><%= order.email %></td>
+                        <td><%= order.racket %></td>
+                        <td><%= order.basketball %></td>
+                        <td><%= order.bat %></td>
+                        <td><%= order.subtotal %></td>
+                        <td><%= order.taxRate %></td>
+                        <td><%= order.taxAmount %></td>
+                        <td><%= order.total %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    </main>
+    <%- include('layouts/footer') %>
+</body>
+</html>
